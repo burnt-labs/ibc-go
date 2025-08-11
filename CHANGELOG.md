@@ -38,6 +38,34 @@ Ref: https://keepachangelog.com/en/1.0.0/
 
 ### Features
 
+* [\#8285](https://github.com/cosmos/ibc-go/pull/8285) Packet forward middleware.
+* [\#8545](https://github.com/cosmos/ibc-go/pull/8545) Support sending multiple payloads in the same packet for atomic payload execution.
+* [\#8473](https://github.com/cosmos/ibc-go/pull/8473) Support sending v2 packets on v1 channel identifiers using aliasing.
+
+### Dependencies
+
+* [\#8451](https://github.com/cosmos/ibc-go/pull/8451) Bump **go** to **1.24**
+* (light-clients/08-wasm)[\#8500](https://github.com/cosmos/ibc-go/pull/8500) Bump **github.com/prysmaticlabs/prysm/v5** to **github.com/OffchainLabs/prysm/v6@v6.0.4**
+
+### API Breaking
+* (apps) [\#8476](https://github.com/cosmos/ibc-go/pull/8476) Remove `ParamSubspace` from all `Keeper` constructors
+* (light-clients/08-wasm) [\#8511](https://github.com/cosmos/ibc-go/pull/8511) Remove deprecated `Checksums` type
+* (core/02-client) [\#8516](https://github.com/cosmos/ibc-go/pull/8516) Remove deprecated `SubmitMisbehaviour` message handler
+
+### State Machine Breaking
+
+### Improvements
+
+### Bug Fixes
+
+### Testing API
+
+* [\#8366](https://github.com/cosmos/ibc-go/pull/8366) - Replaced the deprecated `codec.ProtoMarshaler` interface with `proto.Message`.
+
+## [v10.3.0](https://github.com/cosmos/ibc-go/releases/tag/v10.3.0) - 2025-06-06
+
+### Features
+
 ### Dependencies
 
 * [\#8369](https://github.com/cosmos/ibc-go/pull/8369) Bump **github.com/CosmWasm/wasmvm** to **2.2.4**

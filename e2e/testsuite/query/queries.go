@@ -5,7 +5,7 @@ import (
 	"errors"
 	"sort"
 
-	"github.com/strangelove-ventures/interchaintest/v10/ibc"
+	"github.com/cosmos/interchaintest/v10/ibc"
 
 	"cosmossdk.io/math"
 

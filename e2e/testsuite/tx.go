@@ -8,9 +8,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/strangelove-ventures/interchaintest/v10/chain/cosmos"
-	"github.com/strangelove-ventures/interchaintest/v10/ibc"
-	test "github.com/strangelove-ventures/interchaintest/v10/testutil"
+	"github.com/cosmos/interchaintest/v10/chain/cosmos"
+	"github.com/cosmos/interchaintest/v10/ibc"
+	test "github.com/cosmos/interchaintest/v10/testutil"
 
 	errorsmod "cosmossdk.io/errors"
 	sdkmath "cosmossdk.io/math"

@@ -15,6 +15,7 @@ on:
         options:
           - release/v7.10.x
           - release/v8.7.x
+          - release/v8.8.x
           - release/v10.3.x
           - main
       ibc-go-version:
@@ -54,6 +55,7 @@ jobs:
         release-branch:
           - release/v7.10.x
           - release/v8.7.x
+          - release/v8.8.x
           - release/v10.3.x
           - main
     steps:
@@ -126,15 +128,6 @@ jobs:
     uses: ./.github/workflows/e2e-compatibility-workflow-call.yaml
     with:
       test-file: "e2e/tests/interchain_accounts/gov_test.go"
-      release-version: "${{ needs.determine-image-tag.outputs.release-version }}"
-
-  ica-groups-test:
-    needs:
-      - build-release-images
-      - determine-image-tag
-    uses: ./.github/workflows/e2e-compatibility-workflow-call.yaml
-    with:
-      test-file: "e2e/tests/interchain_accounts/groups_test.go"
       release-version: "${{ needs.determine-image-tag.outputs.release-version }}"
 
   ica-localhost-test:

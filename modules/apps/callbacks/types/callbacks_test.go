@@ -494,7 +494,10 @@ func (s *CallbacksTypesTestSuite) TestGetCallbackData() {
 				if len(tc.expCallbackData.Calldata) > 0 {
 					s.Require().Equal([]byte("calldata"), callbackData.Calldata, tc.name)
 				}
+<<<<<<< HEAD
 
+=======
+>>>>>>> xion/main
 			} else {
 				s.Require().ErrorIs(err, tc.expError, tc.name)
 			}
@@ -595,7 +598,7 @@ func (s *CallbacksTypesTestSuite) TestGetDestSourceCallbackDataTransfer() {
 			transferStack, ok := s.chainA.App.GetIBCKeeper().PortKeeper.Route(transfertypes.ModuleName)
 			s.Require().True(ok)
 
-			packetUnmarshaler, ok := transferStack.(types.CallbacksCompatibleModule)
+			packetUnmarshaler, ok := transferStack.(porttypes.PacketUnmarshalerModule)
 			s.Require().True(ok)
 
 			s.path.Setup()

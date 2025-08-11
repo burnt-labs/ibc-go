@@ -6,7 +6,11 @@ import (
 	"fmt"
 	"testing"
 
-	dockerclient "github.com/docker/docker/client"
+	"github.com/cosmos/interchaintest/v10"
+	"github.com/cosmos/interchaintest/v10/ibc"
+	"github.com/cosmos/interchaintest/v10/relayer"
+	"github.com/cosmos/interchaintest/v10/relayer/hermes"
+	dockerclient "github.com/moby/moby/client"
 	"github.com/pelletier/go-toml"
 	"github.com/strangelove-ventures/interchaintest/v10"
 	"github.com/strangelove-ventures/interchaintest/v10/ibc"
