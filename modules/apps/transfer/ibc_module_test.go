@@ -553,11 +553,7 @@ func (s *TransferTestSuite) TestOnTimeoutPacket() {
 			s.Require().NoError(err) // message committed
 
 			packet, err = ibctesting.ParseV1PacketFromEvents(res.Events)
-<<<<<<< HEAD
-			suite.Require().NoError(err)
-=======
 			s.Require().NoError(err)
->>>>>>> xion/main
 
 			cbs, ok := s.chainA.App.GetIBCKeeper().PortKeeper.Route(ibctesting.TransferPort)
 			s.Require().True(ok)

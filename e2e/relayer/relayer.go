@@ -12,10 +12,6 @@ import (
 	"github.com/cosmos/interchaintest/v10/relayer/hermes"
 	dockerclient "github.com/moby/moby/client"
 	"github.com/pelletier/go-toml"
-	"github.com/strangelove-ventures/interchaintest/v10"
-	"github.com/strangelove-ventures/interchaintest/v10/ibc"
-	"github.com/strangelove-ventures/interchaintest/v10/relayer"
-	"github.com/strangelove-ventures/interchaintest/v10/relayer/hermes"
 	"go.uber.org/zap"
 )
 
