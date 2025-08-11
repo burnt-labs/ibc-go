@@ -13,6 +13,10 @@ coverage:
         target: auto
         threshold: 5
         base: auto
+        informational: true
+        flags:
+          - ibc-go
+          - 08-wasm
 comment:
   require_changes: "coverage_drop OR uncovered_patch" # Only comment when coverage drops or there is uncovered code in the commit
 ignore:

@@ -10,15 +10,9 @@ import (
 	"strings"
 	"time"
 
-<<<<<<< HEAD
-	"github.com/strangelove-ventures/interchaintest/v10"
-	"github.com/strangelove-ventures/interchaintest/v10/ibc"
-	interchaintestutil "github.com/strangelove-ventures/interchaintest/v10/testutil"
-=======
 	"github.com/cosmos/interchaintest/v10"
 	"github.com/cosmos/interchaintest/v10/ibc"
 	interchaintestutil "github.com/cosmos/interchaintest/v10/testutil"
->>>>>>> xion/main
 	"gopkg.in/yaml.v2"
 
 	"github.com/cosmos/cosmos-sdk/codec"
