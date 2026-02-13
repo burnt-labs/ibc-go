@@ -18,12 +18,12 @@ require (
 	cosmossdk.io/x/upgrade v0.2.0
 	github.com/cometbft/cometbft v0.38.19
 	github.com/cosmos/cosmos-sdk v0.53.4
-	github.com/cosmos/gogoproto v1.7.2
-	github.com/cosmos/ibc-go/modules/light-clients/08-wasm/v10 v10.0.0-00010101000000-000000000000
-	github.com/cosmos/ibc-go/v10 v10.3.0
-	github.com/cosmos/interchaintest/v10 v10.0.1
-	github.com/docker/docker v28.5.2+incompatible
-	github.com/moby/moby v28.5.2+incompatible
+	github.com/cosmos/gogoproto v1.7.0
+	github.com/cosmos/ibc-go/modules/light-clients/08-wasm/v10 v10.2.0
+	github.com/cosmos/ibc-go/v10 v10.4.0
+	github.com/cosmos/interchaintest/v10 v10.0.0
+	github.com/docker/docker v27.5.1+incompatible
+	github.com/moby/moby v27.5.1+incompatible
 	github.com/pelletier/go-toml v1.9.5
 	github.com/stretchr/testify v1.11.1
 	go.uber.org/zap v1.27.0

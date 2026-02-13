@@ -410,7 +410,7 @@ func getExpectedLibwasmVersion() string {
 		panic("can't read build info")
 	}
 	for _, d := range buildInfo.Deps {
-		if d.Path != "github.com/CosmWasm/wasmvm/v2" {
+		if d.Path != "github.com/CosmWasm/wasmvm/v3" {
 			continue
 		}
 		if d.Replace != nil {
