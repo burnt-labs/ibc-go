@@ -35,9 +35,11 @@ regardless of its impact on XION. Report those findings through the
 [Interchain Stack security policy](https://hackerone.com/cosmos?type=team&view_policy=true)
 or [security@interchain.io](mailto:security@interchain.io).
 
-Reports about this repository may still be submitted privately through the
-channels above, but publication here does not create bounty eligibility or
-authorize production testing while the fork is absent from current mainnet.
+Reports about this repository may still be submitted privately through
+**Security → Report a vulnerability** on this repository or
+[security@burnt.com](mailto:security@burnt.com), but publication here does not
+create bounty eligibility or authorize production testing while the fork is
+absent from current mainnet.
 
 ## Proof of Concept
 
