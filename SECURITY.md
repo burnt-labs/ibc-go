@@ -5,12 +5,12 @@ This repository is XION's fork of
 release uses upstream `github.com/cosmos/ibc-go/v10@v10.7.0` directly and does
 not replace it with this Burnt Labs fork. This repository is therefore not a
 current-mainnet asset in the
-[Blockchain / DLT bug bounty program](https://github.com/burnt-labs/bug-bounty/blob/0cf55eb5b021116c884193c8a1aafac61f00697c/programs/blockchain.md).
+[Blockchain / DLT bug bounty program](https://github.com/burnt-labs/bug-bounty/blob/7e8ebcba708609a018c1cd6977ab4dfc542de5e0/programs/blockchain.md).
 
 This file summarizes repository-specific terms. Until the same terms are
 published on [`burnt-labs/bug-bounty` `main`](https://github.com/burnt-labs/bug-bounty),
 the canonical program for this repository is the
-[pinned blockchain policy revision](https://github.com/burnt-labs/bug-bounty/blob/0cf55eb5b021116c884193c8a1aafac61f00697c/programs/blockchain.md);
+[pinned blockchain policy revision](https://github.com/burnt-labs/bug-bounty/blob/7e8ebcba708609a018c1cd6977ab4dfc542de5e0/programs/blockchain.md);
 where the documents differ, that revision governs.
 
 ## Reporting a Vulnerability
