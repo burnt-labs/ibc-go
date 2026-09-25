@@ -5,11 +5,13 @@ This repository is XION's fork of
 release uses upstream `github.com/cosmos/ibc-go/v10@v10.7.0` directly and does
 not replace it with this Burnt Labs fork. This repository is therefore not a
 current-mainnet asset in the
-[Blockchain / DLT bug bounty program](https://github.com/burnt-labs/bug-bounty/blob/main/programs/blockchain.md).
+[Blockchain / DLT bug bounty program](https://github.com/burnt-labs/bug-bounty/blob/0cf55eb5b021116c884193c8a1aafac61f00697c/programs/blockchain.md).
 
-This file summarizes repository-specific terms. The published
-[`burnt-labs/bug-bounty`](https://github.com/burnt-labs/bug-bounty) program is
-canonical; where the documents differ, the program terms govern.
+This file summarizes repository-specific terms. Until the same terms are
+published on [`burnt-labs/bug-bounty` `main`](https://github.com/burnt-labs/bug-bounty),
+the canonical program for this repository is the
+[pinned blockchain policy revision](https://github.com/burnt-labs/bug-bounty/blob/0cf55eb5b021116c884193c8a1aafac61f00697c/programs/blockchain.md);
+where the documents differ, that revision governs.
 
 ## Reporting a Vulnerability
 
@@ -27,11 +29,12 @@ severity assessment or reward eligibility.
 ## Fork Scope
 
 There is no Burnt Labs `ibc-go` fork delta in the current XION mainnet release.
-If a future mainnet release reintroduces this fork, the canonical program must
-list the deployed fork version and exact upstream base before that delta is
-eligible. A finding that reproduces on the upstream IBC code used by current
-mainnet belongs to the upstream project and is not eligible under this program,
-regardless of its impact on XION. Report those findings through the
+If a future mainnet release reintroduces this fork, the pinned canonical
+program revision above must list the deployed fork version and exact upstream
+base before that delta is eligible. A finding that reproduces on the upstream
+IBC code used by current mainnet belongs to the upstream project and is not
+eligible under this program, regardless of its impact on XION. Report those
+findings through the
 [Interchain Stack security policy](https://hackerone.com/cosmos?type=team&view_policy=true)
 or [security@interchain.io](mailto:security@interchain.io).
 
