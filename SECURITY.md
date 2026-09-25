@@ -9,9 +9,11 @@ current-mainnet asset in the
 
 This file summarizes repository-specific terms. Until the same terms are
 published on [`burnt-labs/bug-bounty` `main`](https://github.com/burnt-labs/bug-bounty),
-the canonical program for this repository is the
-[pinned blockchain policy revision](https://github.com/burnt-labs/bug-bounty/blob/7e8ebcba708609a018c1cd6977ab4dfc542de5e0/programs/blockchain.md);
-where the documents differ, that revision governs.
+the canonical program for this repository is the pinned
+[program terms revision](https://github.com/burnt-labs/bug-bounty/blob/7e8ebcba708609a018c1cd6977ab4dfc542de5e0/README.md)
+plus the pinned
+[blockchain policy revision](https://github.com/burnt-labs/bug-bounty/blob/7e8ebcba708609a018c1cd6977ab4dfc542de5e0/programs/blockchain.md);
+where these documents differ from this file, the pinned revisions govern.
 
 ## Reporting a Vulnerability
 
@@ -90,6 +92,7 @@ disclosure is coordinated.
 
 This policy does not authorize active testing against a production deployment.
 Good-faith research in a local or researcher-controlled environment may be
-reported privately by email, but bounty eligibility and safe harbor are
-governed by the canonical program's current asset list. Reporting a
+reported privately by email. Bounty eligibility still follows the canonical
+program's named-asset list, while safe harbor follows the pinned canonical
+terms for local, non-production research and incidental discovery. Reporting a
 vulnerability encountered incidentally is always welcome.
