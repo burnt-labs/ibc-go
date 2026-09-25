@@ -2,10 +2,10 @@
 
 This repository is XION's fork of
 [`cosmos/ibc-go`](https://github.com/cosmos/ibc-go). The current XION mainnet
-release builds against Burnt Labs' fork of the `08-wasm` light client. That fork
-delta is an asset in the
-[Blockchain / DLT bug bounty program](https://github.com/burnt-labs/bug-bounty/blob/main/programs/blockchain.md)
-for **Burnt Labs' patches only**.
+release uses upstream `github.com/cosmos/ibc-go/v10@v10.7.0` directly and does
+not replace it with this Burnt Labs fork. This repository is therefore not a
+current-mainnet asset in the
+[Blockchain / DLT bug bounty program](https://github.com/burnt-labs/bug-bounty/blob/main/programs/blockchain.md).
 
 This file summarizes repository-specific terms. The published
 [`burnt-labs/bug-bounty`](https://github.com/burnt-labs/bug-bounty) program is
@@ -26,20 +26,18 @@ severity assessment or reward eligibility.
 
 ## Fork Scope
 
-Only the delta between this fork and its upstream base is in scope. Use the
-fork-to-upstream mapping in the canonical program to identify the exact base
-tag or commit for the deployed XION fork, and diff against that base. A finding
-that reproduces on the unmodified upstream base belongs to the upstream IBC
-project and is not eligible under this program, regardless of its impact on
-XION. Report those findings through the
+There is no Burnt Labs `ibc-go` fork delta in the current XION mainnet release.
+If a future mainnet release reintroduces this fork, the canonical program must
+list the deployed fork version and exact upstream base before that delta is
+eligible. A finding that reproduces on the upstream IBC code used by current
+mainnet belongs to the upstream project and is not eligible under this program,
+regardless of its impact on XION. Report those findings through the
 [Interchain Stack security policy](https://hackerone.com/cosmos?type=team&view_policy=true)
 or [security@interchain.io](mailto:security@interchain.io).
 
-Scope is limited to Burnt Labs' forked code that the current XION mainnet
-release actually builds against. Other packages and modules in this repository,
-and fork versions no longer used by mainnet, are not eligible. Verify the
-current dependency in `burnt-labs/xion` and the deployed mainnet release before
-submitting.
+Reports about this repository may still be submitted privately through the
+channels above, but publication here does not create bounty eligibility or
+authorize production testing while the fork is absent from current mainnet.
 
 ## Proof of Concept
 
@@ -73,9 +71,10 @@ legitimately control, or to test with production privileges they do control.
 
 ## Rewards and Severity
 
-Only **High** and **Critical** findings are reward eligible. The canonical
-program defines severity, exclusions, KYC, duplicate handling, and all other
-reward terms.
+This repository is not currently reward eligible because the current mainnet
+release does not build against it. If a future release and the canonical
+program bring the fork back into scope, only **High** and **Critical** findings
+will be reward eligible under the canonical terms.
 
 ## Responsible Disclosure and Safe Harbor
 
@@ -84,8 +83,8 @@ environment or infrastructure you control, do not access, modify, or disclose
 user data, do not disrupt services, and keep the finding private until
 disclosure is coordinated.
 
-Naming this repository as an asset establishes eligibility, not permission to
-test a production deployment. Good-faith research within the authorized local
-or researcher-controlled environments is covered by the canonical program's
-safe harbor. Reporting a vulnerability encountered incidentally is always
-welcome.
+This policy does not authorize active testing against a production deployment.
+Good-faith research in a local or researcher-controlled environment may be
+reported privately, but bounty eligibility and safe harbor are governed by the
+canonical program's current asset list. Reporting a vulnerability encountered
+incidentally is always welcome.
