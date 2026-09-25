@@ -1,16 +1,98 @@
-# How to Report a Security Bug
+# Security Policy
 
-If you believe you have found a security vulnerability in the Interchain Stack, you can report it to our primary vulnerability disclosure channel, the [Cosmos HackerOne Bug Bounty program](https://hackerone.com/cosmos?type=team).
+This repository is XION's fork of
+[`cosmos/ibc-go`](https://github.com/cosmos/ibc-go). The current XION mainnet
+release uses upstream `github.com/cosmos/ibc-go/v10@v10.7.0` directly and does
+not replace it with this Burnt Labs fork. This repository is therefore not a
+current-mainnet asset in the
+[Blockchain / DLT bug bounty program](https://github.com/burnt-labs/bug-bounty/blob/139cf328a3486f1633a1d949399e8b2225a17396/programs/blockchain.md).
 
-<!-- markdown-link-check-disable-next-line -->
-If you prefer to report an issue via email, you may send a bug report to [security@interchain.io](mailto:security@interchain.io) with the issue details, reproduction, impact, and other information. Please submit only one unique email thread per vulnerability. Any issues reported via email are ineligible for bounty rewards. 
+This file summarizes repository-specific terms. Until the same terms are
+published on [`burnt-labs/bug-bounty` `main`](https://github.com/burnt-labs/bug-bounty),
+the canonical program for this repository is the pinned
+[program terms revision](https://github.com/burnt-labs/bug-bounty/blob/139cf328a3486f1633a1d949399e8b2225a17396/README.md)
+plus the pinned
+[blockchain policy revision](https://github.com/burnt-labs/bug-bounty/blob/139cf328a3486f1633a1d949399e8b2225a17396/programs/blockchain.md);
+where these documents differ from this file, the pinned revisions govern.
 
-Artifacts from an email report are saved at the time the email is triaged. Please note: our team is not able to monitor dynamic content (e.g. a Google Docs link that is edited after receipt) throughout the lifecycle of a report. If you would like to share additional information or modify previous information, please include it in an additional reply as an additional attachment.
+## Reporting a Vulnerability
 
-Please DO NOT file a public issue in this repository to report a security vulnerability. 
+**Do not open a public GitHub issue for a security vulnerability.** Because
+this repository is not named in the current canonical program asset list,
+report it by email at [security@burnt.com](mailto:security@burnt.com).
 
-# Coordinated Vulnerability Disclosure Policy and Safe Harbor
+We acknowledge receipt within **5 business days** and provide a triage decision
+within **14 days**. Active exploitation, or confirmed attacker awareness of an
+unpatched vulnerability, escalates the issue to Critical **response handling**
+— prioritization, coordination, and disclosure timing — regardless of its
+original classification. That escalation does not change the finding's
+severity assessment or reward eligibility.
 
-For the most up-to-date version of the policies that govern vulnerability disclosure, please consult the [HackerOne program page](https://hackerone.com/cosmos?type=team&view_policy=true).
+## Fork Scope
 
-The policy hosted on HackerOne is the official Coordinated Vulnerability Disclosure policy and Safe Harbor for the Interchain Stack, and the teams and infrastructure it supports, and it supersedes previous security policies that have been used in the past by individual teams and projects with targets in scope of the program.
+There is no Burnt Labs `ibc-go` fork delta in the current XION mainnet release.
+If a future mainnet release reintroduces this fork, this policy must first be
+updated to reference the canonical program revision that lists the deployed
+fork version and exact upstream base; until then, that delta is not eligible.
+A finding that reproduces on the upstream
+IBC code used by current mainnet belongs to the upstream project and is not
+eligible under this program, regardless of its impact on XION. Report those
+findings through the
+[Interchain Stack security policy](https://hackerone.com/cosmos?type=team&view_policy=true)
+or [security@interchain.io](mailto:security@interchain.io).
+
+Reports about this repository may still be submitted privately by email to
+[security@burnt.com](mailto:security@burnt.com), but doing so does not create
+bounty eligibility or authorize production testing while the fork is absent
+from current mainnet.
+
+## Proof of Concept
+
+An end-to-end proof of concept is required. Unit tests or keeper harnesses that
+bypass transaction encoding, routing, the ante handler chain, or block execution
+do not demonstrate on-chain exploitability on their own.
+
+Run the proof of concept against a locally running XION node configured with
+mainnet parameters and execute the attack through standard transaction
+broadcast. Broadcast acceptance alone is not sufficient: show inclusion in a
+block, the successful execution result, and the resulting state change or
+security impact. For chain-halt or consensus-failure findings, instead show the
+triggering transaction or input sequence, the height or round at which progress
+stops or diverges, and the observed halt or failure condition; block inclusion
+and successful execution are not required when the failure prevents them.
+
+## Privileged Actor Policy
+
+Findings are classified at **Medium at most** when the attack must begin with
+control of governance, a module authority, validator or operator credentials,
+or another privileged role — or requires that holder to cooperate — and the
+demonstrated impact depends on that holder acting self-destructively, outside
+normal operation, or in collusion while using authority the role already has.
+
+The cap does not apply when a flaw lets an attacker who starts without that
+privilege obtain it or bypass its authorization check, or lets a legitimately
+held limited role exercise authority that role was not granted. Those
+findings are assessed by demonstrated impact. This policy does not authorize
+researchers to acquire or exercise production privileges they do not
+legitimately control, or to test with production privileges they do control.
+
+## Rewards and Severity
+
+This repository is not currently reward eligible because the current mainnet
+release does not build against it. If a future release and the canonical
+program bring the fork back into scope, only **High** and **Critical** findings
+will be reward eligible under the canonical terms.
+
+## Responsible Disclosure and Safe Harbor
+
+Do not test against XION mainnet or other production systems. Use a local
+environment or infrastructure you control, do not access, modify, or disclose
+user data, do not disrupt services, and keep the finding private until
+disclosure is coordinated.
+
+This policy does not authorize active testing against a production deployment.
+Good-faith research in a local or researcher-controlled environment may be
+reported privately by email. Bounty eligibility still follows the canonical
+program's named-asset list, while safe harbor follows the pinned canonical
+terms for local, non-production research and incidental discovery. Reporting a
+vulnerability encountered incidentally is always welcome.
