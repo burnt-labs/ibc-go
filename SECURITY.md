@@ -29,9 +29,10 @@ severity assessment or reward eligibility.
 ## Fork Scope
 
 There is no Burnt Labs `ibc-go` fork delta in the current XION mainnet release.
-If a future mainnet release reintroduces this fork, an updated canonical
-program revision must list the deployed fork version and exact upstream base
-before that delta is eligible. A finding that reproduces on the upstream
+If a future mainnet release reintroduces this fork, this policy must first be
+updated to reference the canonical program revision that lists the deployed
+fork version and exact upstream base; until then, that delta is not eligible.
+A finding that reproduces on the upstream
 IBC code used by current mainnet belongs to the upstream project and is not
 eligible under this program, regardless of its impact on XION. Report those
 findings through the
