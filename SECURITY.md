@@ -28,9 +28,12 @@ severity assessment or reward eligibility.
 
 Only the delta between this fork and its upstream base is in scope. XION fork
 tags use the form `<upstream-tag>-xion.N`; remove the `-xion.N` suffix to
-identify the upstream base and diff against that tag. A finding that reproduces
-on the unmodified upstream base belongs to the upstream IBC project and is not
-eligible under this program, regardless of its impact on XION.
+upstream base and diff against that tag. A finding that reproduces on the
+unmodified upstream base belongs to the upstream IBC project and is not
+eligible under this program, regardless of its impact on XION. Report those
+findings through the
+[Interchain Stack security policy](https://hackerone.com/cosmos?type=team&view_policy=true)
+or [security@interchain.io](mailto:security@interchain.io).
 
 Scope is limited to Burnt Labs' forked code that the current XION mainnet
 release actually builds against. Other packages and modules in this repository,
@@ -55,7 +58,8 @@ security impact.
 Findings are classified at **Medium at most** when the attack must begin with
 control of governance, a module authority, validator or operator credentials,
 or another privileged role — or requires that holder to cooperate — and the
-demonstrated action is already within that role's intended authority.
+demonstrated impact depends on that holder acting self-destructively, outside
+normal operation, or in collusion while using authority the role already has.
 
 The cap does not apply when a flaw lets an attacker who starts without that
 privilege obtain it or bypass its authorization check, or lets a legitimately
@@ -73,9 +77,9 @@ reward terms.
 ## Responsible Disclosure and Safe Harbor
 
 Do not test against XION mainnet or other production systems. Use a local
-environment or infrastructure you control, do not access or disclose user data,
-do not disrupt services, and keep the finding private until disclosure is
-coordinated.
+environment or infrastructure you control, do not access, modify, or disclose
+user data, do not disrupt services, and keep the finding private until
+disclosure is coordinated.
 
 Naming this repository as an asset establishes eligibility, not permission to
 test a production deployment. Good-faith research within the authorized local
