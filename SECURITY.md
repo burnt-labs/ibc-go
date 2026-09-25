@@ -26,12 +26,12 @@ severity assessment or reward eligibility.
 
 ## Fork Scope
 
-Only the delta between this fork and its upstream base is in scope. XION fork
-tags use the form `<upstream-tag>-xion.N`; remove the `-xion.N` suffix to
-upstream base and diff against that tag. A finding that reproduces on the
-unmodified upstream base belongs to the upstream IBC project and is not
-eligible under this program, regardless of its impact on XION. Report those
-findings through the
+Only the delta between this fork and its upstream base is in scope. Use the
+fork-to-upstream mapping in the canonical program to identify the exact base
+tag or commit for the deployed XION fork, and diff against that base. A finding
+that reproduces on the unmodified upstream base belongs to the upstream IBC
+project and is not eligible under this program, regardless of its impact on
+XION. Report those findings through the
 [Interchain Stack security policy](https://hackerone.com/cosmos?type=team&view_policy=true)
 or [security@interchain.io](mailto:security@interchain.io).
 
