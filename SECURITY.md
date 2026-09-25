@@ -15,9 +15,9 @@ where the documents differ, that revision governs.
 
 ## Reporting a Vulnerability
 
-**Do not open a public GitHub issue for a security vulnerability.** Report it
-through **Security → Report a vulnerability** on this repository, or email
-[security@burnt.com](mailto:security@burnt.com).
+**Do not open a public GitHub issue for a security vulnerability.** Because
+this repository is not named in the current canonical program asset list,
+report it by email at [security@burnt.com](mailto:security@burnt.com).
 
 We acknowledge receipt within **5 business days** and provide a triage decision
 within **14 days**. Active exploitation, or confirmed attacker awareness of an
@@ -38,11 +38,10 @@ findings through the
 [Interchain Stack security policy](https://hackerone.com/cosmos?type=team&view_policy=true)
 or [security@interchain.io](mailto:security@interchain.io).
 
-Reports about this repository may still be submitted privately through
-**Security → Report a vulnerability** on this repository or
-[security@burnt.com](mailto:security@burnt.com), but publication here does not
-create bounty eligibility or authorize production testing while the fork is
-absent from current mainnet.
+Reports about this repository may still be submitted privately by email to
+[security@burnt.com](mailto:security@burnt.com), but doing so does not create
+bounty eligibility or authorize production testing while the fork is absent
+from current mainnet.
 
 ## Proof of Concept
 
@@ -90,6 +89,6 @@ disclosure is coordinated.
 
 This policy does not authorize active testing against a production deployment.
 Good-faith research in a local or researcher-controlled environment may be
-reported privately, but bounty eligibility and safe harbor are governed by the
-canonical program's current asset list. Reporting a vulnerability encountered
-incidentally is always welcome.
+reported privately by email, but bounty eligibility and safe harbor are
+governed by the canonical program's current asset list. Reporting a
+vulnerability encountered incidentally is always welcome.
