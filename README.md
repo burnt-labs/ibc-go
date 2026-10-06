@@ -1,3 +1,10 @@
+> [!IMPORTANT]
+> **This fork was archived on 2026-10-06 and is no longer maintained.**
+>
+> XION no longer uses it. Since v31, [burnt-labs/xion](https://github.com/burnt-labs/xion) depends on upstream [cosmos/ibc-go](https://github.com/cosmos/ibc-go) (`github.com/cosmos/ibc-go/v10` v10.7.0) with no replace directive, and the 08-wasm light client this fork patched has been removed from XION. v30 was the last XION release to pin this fork (`modules/light-clients/08-wasm/v10.5.0-xion.1`). Use upstream cosmos/ibc-go instead.
+>
+> Existing tags (`v10.4.0-xion.1`, `v10.5.0-xion.1` and their `modules/light-clients/08-wasm/` counterparts) remain available for historical builds.
+
 <div align="center">
   <h1>ibc-go</h1>
 </div>
